@@ -1,4 +1,4 @@
-
+#! /run/current-system/sw/bin/bash
 
 OUTPUT_FILENAME=out.tex
 
