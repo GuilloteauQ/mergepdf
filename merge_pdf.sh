@@ -1,6 +1,6 @@
 
 
-OUTPUT_FILENAME=
+OUTPUT_FILENAME=out.tex
 
 PDF_FILES=()
 
