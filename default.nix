@@ -3,7 +3,7 @@ with pkgs;
 let
   version = "1.0";
 in {
-  pdfmerger = stdenv.mkDerivation {
+  mergepdf = stdenv.mkDerivation {
     name = "mergepdf-${version}";
     src = fetchTarball("https://github.com/GuilloteauQ/mergepdf/tarball/master");
     buildInputs = [
