@@ -5,14 +5,14 @@ let
 in {
   pdfmerger = stdenv.mkDerivation {
     name = "mergepdf-${version}";
-    src = ./.;
+    src = fetchTarball("https://github.com/GuilloteauQ/mergepdf/tarball/master");
     buildInputs = [
       stdenv
 	  makeWrapper
     ];
     installPhase = ''
       mkdir $out
-      cp pdf_merger.sh $out
+      cp merge_pdf.sh $out
  	  makeWrapper $out/merge_pdf.sh $out/mergepdf --set PATH ${stdenv.lib.makeBinPath [ texlive.combined.scheme-basic ]}
     '';
   };
